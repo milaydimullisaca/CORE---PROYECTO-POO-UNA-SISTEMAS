@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Aprendizaje de Código</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="brand-name">CORE++</div>
+        <div class="header-right">
+            <button class="settings-btn" id="open-settings-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.4-.6-11.2-5.5-14zm-231.4-156c61.9 0 112 50.1 112 112s-50.1 112-112 112-112-50.1-112-112 50.1-112 112-112z"/></svg>
+        </button>
+        <div class="auth-links">
+            <a href="#" id="login-btn">Iniciar Sesión</a>
+            <a href="#" id="register-btn" class="btn-register">Registrarse</a>
+        </div>
+        </div>
+    </header>
+
+    <button id="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+
+    
+
+    <nav class="sidebar-nav">
+        <a href="#inicio" class="menu-item"><span>Inicio</span></a>
+        <a href="#topic-selection-container" class="menu-item"><span>Cursos</span></a>
+        <a href="#topic-explorer" class="menu-item"><span>Explorador</span></a>
+        <a href="#foro" class="menu-item"><span>Foro</span></a>
+    </nav>
+
+    <div class="content-wrapper">
+        <main>
+            <section id="inicio">
+                <div id="topic-selection-container" style="display: none;">
+                    <h2>Elige un Tema</h2>
+                    <p>Comienza tu ruta de aprendizaje seleccionando uno de los siguientes temas.</p>
+                    <div id="topic-selection-cards">
+                        <a href="#punteros" class="topic-card">
+                            <h3>Punteros</h3>
+                            <p>Domina la gestión de memoria y las direcciones.</p>
+                        </a>
+                        <a href="#recursividad" class="topic-card">
+                            <h3>Recursividad</h3>
+                            <p>Aprende a crear funciones que se llaman a sí mismas.</p>
+                        </a>
+                        <a href="#funciones" class="topic-card">
+                            <h3>Funciones</h3>
+                            <p>Organiza tu código en bloques reutilizables.</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="welcome-box">
+                    <h2>Bienvenido a tu Aventura de Programación</h2>
+                    <p>Tu viaje en el aprendizaje del código empieza aquí.</p>
+                    <button id="start-journey-btn" class="cta-btn">Iniciar</button>
+                </div>
+
+                <div id="career-carousel-container" class="career-carousel-container">
+                    <button id="scroll-left-btn" class="carousel-arrow"><i class="fas fa-chevron-left"></i></button>
+                    <div id="career-selection" class="career-selection">
+                        <button class="career-btn" data-career="sistemas">Ingeniería de Sistemas</button>
+                        <button class="career-btn" data-career="medicina">Medicina</button>
+                        <button class="career-btn" data-career="derecho">Derecho</button>
+                        <button class="career-btn" data-career="frontend">Frontend Developer</button>
+                        <button class="career-btn" data-career="backend">Backend Developer</button>
+                        <button class="career-btn" data-career="fullstack">Full Stack Developer</button>
+                        <button class="career-btn" data-career="gamedev">Desarrollo de Videojuegos</button>
+                        <button class="career-btn" data-career="ai">Inteligencia Artificial</button>
+                        <button class="career-btn" data-career="cybersecurity">Ciberseguridad</button>
+                        <button class="career-btn" data-career="datascience">Ciencia de Datos</button>
+                    </div>
+                    <button id="scroll-right-btn" class="carousel-arrow"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <section id="punteros" class="topic-section">
+                <h2>Punteros en C++</h2>
+                <p>Los punteros son una de las características más potentes y complejas de C. Un puntero es una variable que almacena la dirección de memoria de otra variable. Esto permite la manipulación directa de la memoria, la creación de estructuras de datos dinámicas y mucho más.</p>
+                <h4>Conceptos Clave:</h4>
+                <ul>
+                    <li><strong>Declaración:</strong> Se declaran con un asterisco (*), como <code>int *p;</code>.</li>
+                    <li><strong>Operador de Dirección (&):</strong> Obtiene la dirección de memoria de una variable.</li>
+                    <li><strong>Operador de Indirección (*):</strong> Accede al valor almacenado en la dirección de memoria apuntada.</li>
+                </ul>
+                <pre><code>#include <stdio.h>
+
+int main() {
+    int var = 20;
+    int *p = &var; // Declaración e inicialización en una línea
+
+    printf("Valor de var: %d\n", var);
+    printf("Dirección de var: %p\n", (void*)&var);
+    printf("Valor al que apunta p: %d\n", *p);
+
+    *p = 30; // Modificamos el valor de 'var' a través del puntero
+    printf("Nuevo valor de var: %d\n", var);
+
+    return 0;
+}</code></pre>
+
+    <div class="padding-20">
+</div>
+
+    <h2>&#128214; Nivel Basico</h2>
+    <h1>&#128221;Declaracion</h1>
+    <div class="container code-section-punt1">
+        <!-- Sección izquierda: código -->
+        <div class="code-section">
+            <h3>&#128104;&#8205;&#128187; Código:</h3>
+            <pre>
+    1|  int *A;</pre>
+            <p><b>💡Explicacion:</b></p>
+            <p>1| Se declara un puntero A que solo almacena una direccion de memoria.</p>
+        </div>
+
+        <!-- Sección derecha: memoria visual -->
+        <div class="memory-section">
+            <h3>&#129504; Visualización de memoria:</h3>
+            <div class="memory-grid">
+                <div class="cell">1:1</div>
+                <div class="cell">1:2</div>
+                <div class="cell">
+                    A
+                    <span class="tooltip tooltip-red">A = NULL</span>
+                </div>
+                <div class="cell">1:4</div>
+                <div class="cell">1:5</div>
+                <div class="cell">2:1</div>
+                <div class="cell">2:2</div>
+                <div class="cell">2:3</div>
+                <div class="cell">2:4</div>
+                <div class="cell">2:5</div>
+            </div>
+        </div>
+    </div>
+
+     <div class="Nota">
+                ⚠ La declaracion "int *A" se lee como "Punteros a enteros"
+        </div>
+     <div class="container code-section-punt1">
+        <!-- Sección izquierda: código -->
+        <div class="code-section">
+            <h3>&#128104;&#8205;&#128187;Código:</h3>
+            <pre>
+    1| int *A;
+    2| int b = 5;
+    3| A = &b; </pre>
+            <p><b>💡Explicacion:</b></p>
+            <p>1| Se declara un puntero A.</p>
+            <p>2| Declaramos un entero b con valor igual a 5.</p>
+            <p>3| Igualamos A con la direccion de memoria de b</p>
+            <p>Nota: &b se usa para enviar la direccion de memoria donde se almacena la variable</p>
+        </div>
+
+        <!-- Sección derecha: memoria visual -->
+        <div class="memory-section">
+            <h3>&#129504;Visualización de memoria:</h3>
+            <div class="memory-grid">
+                <div class="cell">1:1</div>
+                <div class="cell">1:2</div>
+                <div class="cell">
+                    A
+                    <span class="tooltip">A = 2:3</span>
+                </div>
+                <div class="cell">1:4</div>
+                <div class="cell">1:5</div>
+                <div class="cell">2:1</div>
+                <div class="cell">2:2</div>
+                <div class="cell">b
+                    <span class="tooltip">b = 5</span>
+                </div>
+                <div class="cell">2:4</div>
+                <div class="cell">2:5</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nota">
+        &#9888; Importante: Como se puede apreciar lo que almacena A no es un numero es una posicion de memoria.Entonces cuando hacemos "A = &b" 
+        estamos diciendo que en A se guarde la direccion de memoria de b, por lo tanto ahora A APUNTA a b.
+    </div>
+    
+    <h1>&#128221;Posiciones de memoria</h1>
+
+    <div class="container code-section-punt1">
+        <div class="code-section">
+            <h3>&#128104;&#8205;&#128187;Código:</h3>
+            <pre>
+    1| int *A;
+    2| int b = 5;
+    3| A = &b;
+    4| Imprime("Valor de b: " b)";
+    5| Imprime("Direccion de b: " &b);
+    5| Imprime("Direccion que almacena A: " A);
+    6| Imprime("Valor al que apunta A: " *A);
+            </pre>
+        </div>
+
+        <div class="code-section">
+            <h3>💡Salida:</h3>
+            <pre>
+    Valor de b: 5 
+    Direccion de b: (2:3)
+    Direccion que almacena A: (2:3)
+    Valor al que apunta A: 5
+            </pre>
+        </div>
+
+    </div>
+
+    <div class="nota">
+        &#9888;Importante: En la salida ya se aprecia que A apunta a la direccion de memoria de b, entonces cuando imprimimos *A le decimos al compilador
+        que imprima el valor que almacena la direccion en donde apunta, en este caso apunta a b y b es igual 5.
+    </div>
+
+     <div class="container code-section-punt1 ">
+        <div class="code-section">
+            <h3>&#128104;&#8205;&#128187;Código:</h3>
+            <pre>
+    1| int *A;
+    2| int b = 5;
+    3| A = &b;
+    4| *A = 20;
+    5| A = 20;
+            </pre>
+            <p>Cual de las 2 ultimas lineas de codigo esta formulada de manera incorrecta?</p>
+        </div>
+
+        <div class="code-section">
+            <h3>💡Explicacion</h3>
+            <pre>
+✔ Con *A = 20; → Se cambia el valor al que apunta el puntero.
+❌ Con A = 20; → Intentamos cambiar la dirección a la que apunta el puntero, pero estamos poniendo un número que no es válido como dirección de memoria.
+            </pre>
+        </div>
+    </div>
+
+    <div class="padding-20">
+</div>
+
+    <h2>&#128214; Nivel intermedio</h2>
+    <h1>&#128221;Punteros y Arrays</h1>
+
+    <div class="container code-section-punt1">
+        <!-- Sección izquierda: código -->
+        <div class="code-section">
+            <h3>&#128104;&#8205;&#128187; Código:</h3>
+            <pre>
+    1|  int A[4] = {1, 2, 3, 4};
+    2|  int *ptr = A;
+    3|  for (int i = 0; i < 5; i++) {
+    4|      cout << "Elemento " << i << ": " << *(ptr + i) << endl; }</pre>
+            <p><b>💡Explicacion:</b></p>
+            <p>1| Se declara un arreglo de 5 enteros.</p>
+            <p>2| ptr apunta al primer elemento del arreglo.</p>
+            <p>4| *(ptr + i) permite acceder al elemento en la posición i.</p>
+            <p>Nota: *(ptr + i) Es equivalente a A[i].</p>
+        </div>
+
+        <!-- Sección derecha: memoria visual -->
+        <div class="memory-section">
+            <h3>&#129504; Visualización de memoria:</h3>
+            <div class="memory-grid">
+                <div class="cell">1:1</div>
+                <div class="cell">A[0] <span class="tooltip tooltip-red">A[0] = 1</span></div>
+                <div class="cell">A[1] <span class="tooltip tooltip-red">A[1] = 2</span></div>
+                <div class="cell">A[2] <span class="tooltip tooltip-red">A[2] = 3</span></div>
+                <div class="cell">A[3] <span class="tooltip tooltip-red">A[3] = 4</span></div>
+                <div class="cell">2:1</div>
+                <div class="cell">2:2</div>
+                <div class="cell">2:3</div>
+                <div class="cell">2:4</div>
+                <div class="cell">2:5</div>
+                <div class="cell">1:1</div>
+                <div class="cell">1:2</div>
+                <div class="cell">ptr<span class="tooltip tooltip-red">ptr = 1:2</span>
+                </div>
+                <div class="cell">1:4</div>
+                <div class="cell">1:5</div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <h1>&#128221;Punteros y Funciones</h1>
+    <div class="container code-section-punt1">
+        <!-- Sección izquierda: código -->
+        <div class="code-section">
+            <h3>&#128104;&#8205;&#128187; Código:</h3>
+            <pre>
+    //Tenemos la funcion
+    1|  void intercambiar(int *a, int *b) {
+    2|  int temp = *a;
+    3|  *a = *b;
+    4|  *b = temp;}
+    //En en main
+    5|  int x = 10, y = 20;
+    7|  intercambiar(&x, &y);</pre>
+            <p class="code-section-p"><b>💡Explicacion:</b></p>
+            <p>1| La función recibe dos punteros a enteros.</p>
+            <p>2| Declaramos temp igual a la direccion donde apunta a.</p>
+            <p>3| Intercambiamos los valores de a y b.</p>
+            <p>4| Guardamos en b lo que se almaceno en a.</p>
+            <p>5| Declaramos x e y como enteros.</p>
+            <p>6| Usamos la funcion para intercambiar.</p>
+        </div>
+
+        <!-- Sección derecha: memoria visual -->
+        <div class="code-section">
+            <h3>💡Explicacion:</h3>
+            <p>
+                La función recibe dos punteros a enteros y se utiliza el operador * para acceder a 
+                los valores que apuntan y se intercambian usando una variable temporal.
+            </p>
+            <p>Se pasan las direcciones de x e y a la función, ello ya que la funcion recibe punteros y 
+                ello en esencia porque los punteros representan direcciones de memoria.
+                Los valores de las variables se intercambian directamente, ya que se trabaja sobre sus direcciones de memoria.
+            </p>
+        </div>
+    </div>
+
+    </div>
+
+
+            </section>
+
+            <section id="recursividad" class="topic-section">
+                <h2>Recursividad</h2>
+                <p>La recursividad es una técnica de programación donde una función se llama a sí misma para resolver un problema. Es especialmente útil para problemas que pueden dividirse en subproblemas más pequeños y similares.</p>
+                <h4>Componentes de una Función Recursiva:</h4>
+                <ul>
+                    <li><strong>Caso Base:</strong> Una condición que detiene la recursividad para evitar un bucle infinito.</li>
+                    <li><strong>Paso Recursivo:</strong> La parte de la función que se llama a sí misma, acercándose al caso base.</li>
+                </ul>
+                <pre><code>#include <stdio.h>
+
+// Función recursiva para calcular el factorial
+int factorial(int n) {
+    // Caso base: si n es 0, el factorial es 1
+    if (n <= 1) {
+        return 1;
+    }
+    // Paso recursivo: n * factorial de (n-1)
+    return n * factorial(n - 1);
+}
+
+int main() {
+    int num = 5;
+    printf("El factorial de %d es: %d\n", num, factorial(num));
+    return 0;
+}</code></pre>
+            </section>
+            
+            <section id="funciones" class="topic-section">
+                <h2>Funciones en C</h2>
+                <p>Las funciones son bloques de código que realizan una tarea específica. Permiten organizar el código, reutilizarlo y hacerlo más legible y mantenible.</p>
+                <h4>Partes de una Función:</h4>
+                <ul>
+                    <li><strong>Tipo de Retorno:</strong> El tipo de dato que la función devuelve (<code>int</code>, <code>void</code>, etc.).</li>
+                    <li><strong>Nombre:</strong> Identificador único de la función.</li>
+                    <li><strong>Parámetros:</strong> Variables que la función recibe como entrada.</li>
+                    <li><strong>Cuerpo:</strong> El bloque de código que ejecuta la lógica de la función.</li>
+                </ul>
+                <pre><code>#include <stdio.h>
+
+// Prototipo de la función (buena práctica)
+int suma(int a, int b);
+
+int main() {
+    int resultado = suma(10, 5);
+    printf("El resultado es: %d\n", resultado);
+    return 0;
+}
+
+// Definición de la función
+int suma(int a, int b) {
+    return a + b;
+}</code></pre>
+            </section>
+
+            <section id="topic-explorer" class="topic-section">
+                <h2>Explorador de Temas</h2>
+                <p>Visualiza cómo se conectan los conceptos y sigue tu ruta de aprendizaje de forma interactiva.</p>
+                <div class="topic-explorer-graph">
+                    <!-- Nodos principales -->
+                    <div class="node main-node" id="node-c-lang" style="top: 50%; left: 10%;">Lenguaje C</div>
+                    
+                    <!-- Nodos de temas -->
+                    <div class="node topic-node" id="node-punteros" style="top: 20%; left: 40%;">Punteros</div>
+                    <div class="node topic-node" id="node-funciones" style="top: 50%; left: 40%;">Funciones</div>
+                    <div class="node topic-node" id="node-recursividad" style="top: 80%; left: 40%;">Recursividad</div>
+
+                    <!-- Nodos de sub-temas -->
+                    <div class="node sub-node" id="node-memoria" style="top: 10%; left: 70%;">Gestión de Memoria</div>
+                    <div class="node sub-node" id="node-factorial" style="top: 90%; left: 70%;">Ej: Factorial</div>
+
+                    <!-- Conexiones (SVG) -->
+                    <svg class="connections">
+                        <line x1="10%" y1="50%" x2="40%" y2="20%" class="line-punteros"/>
+                        <line x1="10%" y1="50%" x2="40%" y2="50%" class="line-funciones"/>
+                        <line x1="10%" y1="50%" x2="40%" y2="80%" class="line-recursividad"/>
+                        <line x1="40%" y1="20%" x2="70%" y2="10%" class="line-memoria"/>
+                        <line x1="40%" y1="80%" x2="70%" y2="90%" class="line-factorial"/>
+                    </svg>
+                </div>
+            </section>
+
+            <section id="foro" class="topic-section">
+                <h2>Foro de la Comunidad</h2>
+                <p>¡Este es el espacio para conectar con otros estudiantes! Comparte tus dudas, ayuda a tus compañeros y discute sobre los temas del curso.</p>
+                <div class="forum-placeholder">
+                    <h3>Próximamente...</h3>
+                    <p>Estamos trabajando en un sistema de foro interactivo. ¡Vuelve pronto!</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 core++. Todos los derechos reservados.</p>
+    </footer>
+
+    <button id="floating-save-btn" class="floating-btn">Guardar Progreso</button>
+
+    <div id="login-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-login-modal" class="close-btn">&times;</button>
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn-primary">Entrar</button>
+                <p class="form-footer">¿No tienes una cuenta? <a href="#" id="register-link">Regístrate</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="settings-panel" class="settings-panel">
+        <div class="settings-content">
+            <button id="close-settings-btn" class="close-btn">&times;</button>
+            <h2>Ajustes</h2>
+            <p>Aquí podrás configurar tus preferencias.</p>
+            <div class="setting-item">
+                <label for="focus-mode-toggle">Modo de Concentración</label>
+                <label class="switch">
+                    <input type="checkbox" id="focus-mode-toggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <script src="effects.js" defer></script>
+    <script src="ui.js" defer></script>
+    <script src="courses.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
